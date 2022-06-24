@@ -18,11 +18,7 @@ class HomeScreen extends StatelessWidget {
         actions: [
           IconButton(
             onPressed: () {
-              ;
-              if (controller == null) {
-                return;
-              }
-              controller!.loadUrl(homeUrl);
+              controller != null ? controller!.loadUrl(homeUrl) : null;
             },
             icon: Icon(
               Icons.home,
